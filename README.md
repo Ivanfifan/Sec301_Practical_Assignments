@@ -69,3 +69,5 @@
 Запит Create_tables.sql для створення таблиць як у мене
 
 Запит Insert_data.sql для вставки таких самих даних як у мене
+
+Планував базу даних в [drawDB](https://www.drawdb.app/) та [ER Flow](https://app.erflow.io)
