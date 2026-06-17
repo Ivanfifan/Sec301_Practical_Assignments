@@ -1,4 +1,4 @@
-# Practical Assignment 01 — Semenchenko Ivan
+# Practical Assignment 1 — Semenchenko Ivan
 ## Опис бази даних
 Ця база даних є спрощеною моделлю сервісу Apple Music
 
