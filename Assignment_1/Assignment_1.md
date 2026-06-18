@@ -56,14 +56,6 @@
 
 Та сортуємо за спаданням по стовпцю listening_time 
 
-## Результат виконання запиту
-
-| username | country | city | artist_name | album_title | subscription_type | streams_count | listening_time |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| diana | Poland | Warsaw | Queens of the Stone Age | In Times New Roman... | Premium | 2 | 473 |
-| ivan_s | Ukraine | Kyiv | Metallica | ...And Justice for All | Premium | 1 | 446 |
-| stoner_dude | Ukraine | Kyiv | Queens of the Stone Age | ...Like Clockwork | Premium | 1 | 235 |
-
 ## Додатково
 
 Запит Create_tables.sql для створення таблиць як у мене
