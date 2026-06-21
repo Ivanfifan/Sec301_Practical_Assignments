@@ -40,11 +40,11 @@ AS $$
 BEGIN
     IF p_quantity > (SELECT stock_quantity FROM products WHERE product_id = p_product_id)
         THEN
-            RAISE EXCEPTION 'Недостатньо товару на складі!';
+            RAISE EXCEPTION 'Недостатньо товару на складі';
         END IF;
     IF p_quantity <= 0
         THEN
-            RAISE EXCEPTION 'Кількість має бути більшою за нуль!';
+            RAISE EXCEPTION 'Кількість має бути більшою за нуль';
         END IF;
     INSERT INTO order_items(order_id,product_id,price,quantity)
     VALUES (p_order_id,p_product_id, (SELECT price FROM products WHERE product_id = p_product_id), p_quantity);
