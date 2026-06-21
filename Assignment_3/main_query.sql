@@ -102,3 +102,19 @@ FOR EACH ROW
 
 -- Task 6
 
+-- Show customers can be created, products can be created
+
+INSERT INTO customers (full_name, email, balance)
+VALUES ('Test User', 'test.user@example.com', 500.00);
+
+INSERT INTO products (product_name, price, stock_quantity)
+VALUES ('Test item', 100.00, 10);
+
+-- Show orders can be created using the procedure
+
+CALL create_order(6);
+
+-- Show products can be added to orders using the procedure
+
+CALL add_product_to_order(5,7,4)
+
