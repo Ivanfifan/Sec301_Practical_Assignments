@@ -38,13 +38,13 @@ CREATE OR REPLACE PROCEDURE add_product_to_order(
 LANGUAGE plpgsql
 AS $$
 BEGIN
-    IF p_quantity > (SELECT stock_quantity FROM products WHERE product_id = p_product_id)
-        THEN
-            RAISE EXCEPTION 'Недостатньо товару на складі';
-        END IF;
     IF p_quantity <= 0
         THEN
             RAISE EXCEPTION 'Кількість має бути більшою за нуль';
+        END IF;
+    IF p_quantity > (SELECT stock_quantity FROM products WHERE product_id = p_product_id)
+        THEN
+            RAISE EXCEPTION 'Недостатньо товару на складі';
         END IF;
     INSERT INTO order_items(order_id,product_id,price,quantity)
     VALUES (p_order_id,p_product_id, (SELECT price FROM products WHERE product_id = p_product_id), p_quantity);
@@ -116,5 +116,5 @@ CALL create_order(6);
 
 -- Show products can be added to orders using the procedure
 
-CALL add_product_to_order(5,7,4)
+CALL add_product_to_order(5,7,4);
 
