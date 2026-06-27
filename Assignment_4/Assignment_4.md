@@ -180,4 +180,4 @@ ON users
 - `create_procedure.sql` — скрипт для створення процедури `upgrade_user_to_premium`
 - `create_trigger.sql` — скрипт для створення тригера `subscription_downgrade`
 - `optimed_query.sql` — аналітичний запит з індексами та `EXPLAIN ANALYZE`
-- `insert_data_big.py` — Python скрипт для генерації 1 000 000+ записів# Practical Assignment 4 — Semenchenko Ivan
+- `insert_data_big.py` — Python скрипт для генерації 1 000 000+ записів
